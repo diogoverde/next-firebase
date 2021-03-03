@@ -1,9 +1,14 @@
 import Link from "next/link";
+import { useContext } from "react";
+import { UserContext } from "../lib/context";
 
 // Top navbar
 export default function Navbar() {
-  const user = null;
-  const username = null;
+  //replace hard coded values with context hook
+  //   const user = null;
+  //   const username = null;
+
+  const { user, username } = useContext(UserContext);
 
   const signOut = () => {
     console.log("Sign Out");
